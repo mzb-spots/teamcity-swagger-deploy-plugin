@@ -34,8 +34,8 @@ public class SwaggerUploadBuildProcessAdapter extends BuildProcessAdapter {
     private static final String logTypeId = "default";
 
     private final String targetPath;
-    private boolean interruptedFlag;
-    private boolean finishedFlag;
+    private volatile boolean interruptedFlag;
+    private volatile boolean finishedFlag;
     private BuildFinishedStatus resultStatus;
     private BuildRunnerContext context;
     private BuildProgressLogger buildProgressLogger;
